@@ -1,3 +1,5 @@
+import ModalTestWindow from './ModalTestWindow.jsx';
+
 export default function Welcome() {
   return (
     <div>
@@ -33,6 +35,11 @@ export default function Welcome() {
         >
           Models
         </a>
+      </div>
+
+      <div style={{ marginTop: 32 }}>
+        <h2 style={{ fontSize: 24, marginBottom: 12 }}>Redux Modal Demo</h2>
+        <ModalTestWindow />
       </div>
     </div>
   );
