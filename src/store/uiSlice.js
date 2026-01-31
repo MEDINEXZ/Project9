@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isModalOpen: false,
-  theme: 'light'
+  theme: 'light',
+  currency: 'USD'
 };
 
 const uiSlice = createSlice({
@@ -23,9 +24,12 @@ const uiSlice = createSlice({
     },
     toggleTheme: (state) => {
       state.theme = state.theme === 'light' ? 'dark' : 'light';
+    },
+    setCurrency: (state, action) => {
+      state.currency = action.payload;
     }
   }
 });
 
-export const { toggleModal, openModal, closeModal, setTheme, toggleTheme } = uiSlice.actions;
+export const { toggleModal, openModal, closeModal, setTheme, toggleTheme, setCurrency } = uiSlice.actions;
 export default uiSlice.reducer;
